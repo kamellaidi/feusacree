@@ -1,0 +1,8 @@
+.bird-gif {
+    width: 100px;
+    height: auto;
+    transform: scaleX(-1);
+    filter:sepia(100%) hue-rotate(-70deg);
+    margin-top: 2rem;
+  }
+  

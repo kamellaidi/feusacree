@@ -1,0 +1,35 @@
+.mobile-navbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-navbar {
+      display: flex;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      height: 60vh; /* Hauteur de l'écran */
+    }
+    
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Hauteur de la navbar */
+      list-style: none;
+      padding: 0;
+    }
+    
+    .mobile-nav-links li {
+      margin-bottom: 20px; /* Espacement entre les liens */
+    }
+    
+    .mobile-nav-links a {
+      color: #886675;
+      font-size: 3rem; /* Taille du texte */
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+  

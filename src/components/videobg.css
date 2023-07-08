@@ -1,0 +1,28 @@
+.video-background {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(100%) hue-rotate(-70deg);
+}
+
+@media (max-width: 768px) {
+  .video-background {
+    justify-content: center;
+  }
+
+  .video-element {
+    width: 100%;
+    height: 70%;
+    object-fit: fill;
+    transform: scale(2) translateX(-10%) translateY(6%);
+  }
+}
