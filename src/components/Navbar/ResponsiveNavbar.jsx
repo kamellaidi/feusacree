@@ -1,9 +1,9 @@
-import './ResponsiveNavbar.css'
+import './ResponsiveNavbar.css';
+import Flame from '../Navbar/Flame';
 
 const ResponsiveNavbar = () => {
   return (
-    <nav className="mobile-navbar">
-
+    <nav className='mobile-navbar'>
       <ul className='mobile-nav-links'>
         <li>
           <a href='#presentation'>Présentation</a>
@@ -17,8 +17,14 @@ const ResponsiveNavbar = () => {
         <li>
           <a href='#contact'>Contact</a>
         </li>
+        <li>
+          <a href='#'>
+            <Flame />
+          </a>
+        </li>
       </ul>
     </nav>
-  )}
+  );
+};
 
-export default ResponsiveNavbar
+export default ResponsiveNavbar;

@@ -7,10 +7,6 @@ const Presentation = () => {
   return (
     <div className='text-block'>
       <h2>Lorem ipsum</h2>
-      {/* <p>
-      Bonjour, je suis Kamel Laïdi, développeur web Javascript. <br /> Je maîtrise les bases de données, notamment MySQL, et je suis compétent dans les technologies front-end populaires comme React, Next.js, Vite et Vue.js. <br />J'ai également une solide expérience en développement back-end avec Node.js et Express.<br /> Je suis constamment à jour sur les dernières tendances et je suis ouvert à de nouvelles opportunités passionnantes. <br />
-      N'hésitez pas à explorer mon site pour en savoir plus sur mes compétences et projets. Contactez-moi si vous avez des questions ou des opportunités intéressantes. <br />Merci de visiter mon portfolio !
-      </p> */}
       <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
 Sed varius sagittis tortor, eu fermentum felis efficitur sed.<br />

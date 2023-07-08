@@ -8,7 +8,7 @@
       position: fixed;
       justify-content: center;
       align-items: center;
-      height: 60vh; /* Hauteur de l'écran */
+      height: 100vh; /* Hauteur de l'écran */
     }
     
     .mobile-nav-links {

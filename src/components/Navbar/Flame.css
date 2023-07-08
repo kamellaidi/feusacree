@@ -6,3 +6,9 @@
     margin-top: 2rem;
   }
   
+  @media (max-width: 768px) {
+    .bird-gif {
+      width: 200px;
+      margin-top: 3rem;
+    }
+  }
