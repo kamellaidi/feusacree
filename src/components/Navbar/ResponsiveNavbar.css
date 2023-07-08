@@ -14,7 +14,7 @@
     .mobile-nav-links {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       height: 100%; /* Hauteur de la navbar */
       list-style: none;
@@ -22,7 +22,16 @@
     }
     
     .mobile-nav-links li {
+      margin-top: 15px;
       margin-bottom: 20px; /* Espacement entre les liens */
+    }
+
+    .mobile-nav-links li:last-child {
+      margin-top: auto; /* Ajustez cette valeur selon vos besoins */
+    }
+
+    .mobile-nav-links li:first-child {
+      margin-top: auto; /* Ajustez cette valeur selon vos besoins */
     }
     
     .mobile-nav-links a {
@@ -30,6 +39,12 @@
       font-size: 3rem; /* Taille du texte */
       text-align: center;
       text-decoration: none;
+      transition: color 1s ease;
     }
+
+    .mobile-nav-links a:hover {
+      color: var(--firepink);
+    }
+
   }
   
