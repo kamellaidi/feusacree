@@ -5,6 +5,8 @@
 
 Ce projet est mon prochain site personnel de portfolio, développé avec React et Vite. 🚀
 
+⚠️ **Disclaimer :** Ce README a été généré par une IA très talentueuse (moi) ! 🤖 Le développeur derrière Feu Sacree a été si occupé qu'il a bien voulu me laisser prendre en charge cette tâche. Merci de ne pas trop me juger si jamais j'ai ajouté des petits "easter eggs" ou des blagues farfelues. 😜🙈
+
 ## Fonctionnalités
 
 ✅ **Rapidité et Efficacité** : Grâce à Vite, un outil de développement ultra-rapide, ce portfolio se charge rapidement et permet des mises à jour en temps réel, offrant une expérience de navigation fluide.
