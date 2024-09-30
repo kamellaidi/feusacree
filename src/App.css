@@ -9,9 +9,21 @@
 }
 
 body {
-background-color: black;
+  background-color: black;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* Barre de défilement */
@@ -29,8 +41,9 @@ background-color: black;
   border: none; /* Supprimer les contours */
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   body {
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -1,18 +1,23 @@
-nav {
-  position: absolute;
+.navbar {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
-  height: 60px;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  background-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
 }
 
 .nav-links li {
-  display: inline-block;
   margin-left: 20px;
 }
 
@@ -28,8 +33,69 @@ nav {
   color: var(--firepink);
 }
 
+.mobile-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  nav {
+  .desktop-nav {
     display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #886675;
+  }
+
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .mobile-nav-links li {
+    margin: 2rem 0;
+  }
+
+  .mobile-nav-links a {
+    color: #886675;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav-links a:hover {
+    color: var(--firepink);
   }
 }

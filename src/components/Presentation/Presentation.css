@@ -1,52 +1,69 @@
+.presentation-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
 .text-block {
-  padding: 20px;
+  padding: 30px;
   margin: 20px;
   color: #fff;
-  /* border: 1px solid #880b0b39; */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Boîte d'ombre */
-  background: rgba(0, 0, 0, 0.203);
-  border-radius: 10px; /* Contours arrondis */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
   width: 40%;
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  opacity: 0; /* Le texte est initialement invisible */
-  animation: fade-in 15s ease-in forwards; /* Animation de fondu */
+  opacity: 0;
+  animation: fade-in 2s ease-in forwards;
 }
 
 .text-block h2 {
-  margin-bottom: 5%; /* Espacement en bas du titre (2% de la largeur du parent) */
+  margin-bottom: 20px;
   color: var(--firepink);
-  opacity: 0.6;
+  opacity: 0.8;
+  font-size: 2rem;
 }
 
 .text-block p {
   margin-top: 1em;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0; /* Opacité initiale */
-  }
-  to {
-    opacity: 1; /* Opacité finale */
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media screen and (max-width: 1024px) {
+  .text-block {
+    width: 60%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .text-block {
-    text-align: center;
+  .presentation-section {
+    padding-top: 80px; /* Espace pour la navbar */
+    align-items: flex-start;
   }
 
-  /* Styles responsifs pour les écrans de petite taille */
+  .text-block {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding: 25px;
+  }
+
   .text-block h2 {
-    margin-bottom: 15px; /* Espacement en bas du titre (10px) */
-    display: none;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .text-block p {
-    margin-top: 0.7rem; /* Espacement en haut du paragraphe (10px) */
-    display: none;
+    font-size: 0.85rem;
   }
 }
