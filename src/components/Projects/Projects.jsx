@@ -3,19 +3,24 @@ import './projects.css';
 
 const projects = [
   {
-    title: "Projet 1",
-    description: "Description du projet 1. Un exemple de réalisation significative.",
-    technologies: ["React", "Node.js", "MongoDB"],
+    title: "LocStore",
+    description: "Site e-commerce de location de matériel événementiel. Développé en équipe comme projet de fin d'études.",
+    technologies: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
   },
   {
-    title: "Projet 2",
-    description: "Description du projet 2. Une autre réalisation importante dans mon parcours.",
-    technologies: ["Vue.js", "Express", "PostgreSQL"],
+    title: "RecipesKamel",
+    description: "Site de recettes de cuisine avec navigation dynamique et gestion d'état complexe.",
+    technologies: ["React", "Redux", "React Router", "Sass"],
   },
   {
-    title: "Projet 3",
-    description: "Description du projet 3. Un projet qui démontre mes compétences techniques.",
-    technologies: ["Angular", "Django", "MySQL"],
+    title: "DubaiHome",
+    description: "Site de recherche immobilière utilisant l'API Bayut pour du contenu dynamique.",
+    technologies: ["Next.js", "Chakra UI", "API Integration"],
+  },
+  {
+    title: "Portfolio",
+    description: "Site personnel de présentation professionnelle avec design responsive et moderne.",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
   },
 ];
 

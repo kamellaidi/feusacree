@@ -3,6 +3,7 @@ import VideoBG from './components/VideoBG'
 import Navbar from './components/Navbar/Navbar'
 import Presentation from './components/Presentation/Presentation'
 import Projects from './components/Projects/Projects'
+import Skills from './components/Skills/Skills'
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <main>
         <Presentation />
         <Projects />
+        <Skills />
       </main>
     </div>
   )

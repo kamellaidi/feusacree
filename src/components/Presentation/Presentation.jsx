@@ -1,24 +1,22 @@
+/* eslint-disable react/no-unescaped-entities */
 import './Presentation.css';
 
 const Presentation = () => {
   return (
-    <section className="presentation-section">
+    <section id="presentation" className="presentation-section">
       <div className="text-block">
-        <h2>Lorem ipsum</h2>
+        <h2>Hello World</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Sed varius sagittis tortor, eu fermentum felis efficitur sed.
-          Aliquam volutpat lectus vitae justo facilisis, sit amet congue elit aliquet.
-          Morbi et commodo sapien, sed vestibulum ex.
-          Nullam sed magna convallis, porta justo ut, pellentesque lectus.
-          Suspendisse ac mauris vitae ex pellentesque consequat.
-          Duis sit amet mauris a felis fermentum fermentum non ac lorem.
-          Integer eget leo nec odio faucibus pulvinar.
-          Etiam vitae ultrices arcu, non sagittis felis.
-          Nullam cursus ante a purus varius feugiat.
-          Ut in quam sit amet metus egestas gravida id eget nunc.
-          Mauris finibus fermentum faucibus.
-          Curabitur at ultricies quam, id placerat mi.
+          Je suis Kamel Laïdi, développeur web Javascript passionné par le front-end et le back-end. Mon adaptabilité et mon expertise me permettent de créer des solutions web innovantes et efficaces.
+        </p>
+        <p>
+          Actuellement, je contribue à l'informatisation d'outils de production, développant des formulaires dynamiques et gérant des bases de données avec SAP HANA et SQL Server.
+        </p>
+        <p>
+          Mes compétences couvrent React, Redux, Node.js, Express, et diverses bases de données. J'ai réalisé des projets variés, de l'e-commerce à la location immobilière, témoignant de ma polyvalence.
+        </p>
+        <p>
+          Toujours en quête de nouveaux défis, je suis prêt à apporter mes compétences à des projets innovants. Explorez mon portfolio pour en savoir plus !
         </p>
       </div>
     </section>
