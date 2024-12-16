@@ -1,7 +1,7 @@
 // ProjectModalContent.jsx
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './projectModalContent.css';
+import './projectmodalcontent.css';
 
 const ProjectModalContent = ({ project }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
