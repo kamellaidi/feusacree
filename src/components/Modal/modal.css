@@ -1,0 +1,50 @@
+/* Modal.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(224, 168, 192, 0.2);
+    color: #fff;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+  }
+  
+  .modal-header h3 {
+    color: #e0a8c0;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #e0a8c0;
+  }

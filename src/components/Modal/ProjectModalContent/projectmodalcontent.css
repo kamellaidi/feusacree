@@ -1,0 +1,92 @@
+/* ProjectModalContent.css */
+.project-modal-content {
+    padding: 25px;
+  }
+  
+  .project-image-container {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .project-image-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-button:hover {
+    background: rgba(224, 168, 192, 0.3);
+  }
+  
+  .prev {
+    left: 15px;
+  }
+  
+  .next {
+    right: 15px;
+  }
+  
+  .image-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  
+  .indicator.active {
+    background: #e0a8c0;
+  }
+  
+  .project-details {
+    color: #fff;
+  }
+  
+  .project-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+  
+  /* Réutilisation des styles existants pour les technologies */
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .project-image-container img {
+      height: 300px;
+    }
+    
+    .project-details {
+      text-align: center;
+    }
+    
+    .technologies {
+      justify-content: center;
+    }
+  }
