@@ -3,50 +3,50 @@ import './projects.css';
 import Modal from '../Modal/Modal';
 import ProjectModalContent from '../Modal/ProjectModalContent/ProjectModalContent';
 
+import locStore1 from '../../assets/screenshots_projects/test1.png';
+import locStore2 from '../../assets/screenshots_projects/test1 copy.png';
+import locStore3 from '../../assets/screenshots_projects/test1 copy 2.png';
+
+import recipesKamel1 from '../../assets/screenshots_projects/test1 copy 3.png';
+import recipesKamel2 from '../../assets/screenshots_projects/test1 copy 4.png';
+import recipesKamel3 from '../../assets/screenshots_projects/test1 copy 5.png';
+
+import dubaiHome1 from '../../assets/screenshots_projects/test1 copy 5.png';
+import dubaiHome2 from '../../assets/screenshots_projects/test1 copy 6.png';
+import dubaiHome3 from '../../assets/screenshots_projects/test1 copy 7.png';
+
+import portfolio1 from '../../assets/screenshots_projects/test1 copy.png';
+import portfolio2 from '../../assets/screenshots_projects/test1 copy 2.png';
+import portfolio3 from '../../assets/screenshots_projects/test1 copy 3.png';
+
 const projects = [
   {
     title: "LocStore",
     description: "Site e-commerce de location de matériel événementiel. Développé en équipe comme projet de fin d'études.",
-    longDescription: "LocStore est une plateforme innovante de location de matériel événementiel, développée en équipe dans le cadre de notre projet de fin d'études. Cette application propose une interface intuitive permettant aux utilisateurs de parcourir le catalogue, réserver du matériel, et gérer leurs locations.",
+    longDescription: "LocStore est une plateforme innovante de location de matériel événementiel...",
     technologies: ["React", "Redux", "Node.js", "Express", "PostgreSQL"],
-    images: [
-      '/src/assets/screenshots_projects/test1.png',
-      '/src/assets/screenshots_projects/test1 copy.png',
-      '/src/assets/screenshots_projects/test1 copy 2.png'
-    ]
+    images: [locStore1, locStore2, locStore3]
   },
   {
     title: "RecipesKamel",
     description: "Site de recettes de cuisine avec navigation dynamique et gestion d'état complexe.",
-    longDescription: "RecipesKamel est une application web moderne dédiée aux passionnés de cuisine. Elle offre une expérience utilisateur fluide avec une navigation dynamique entre les recettes et une gestion d'état avancée via Redux.",
+    longDescription: "RecipesKamel est une application web moderne dédiée aux passionnés de cuisine...",
     technologies: ["React", "Redux", "React Router", "Sass"],
-    images: [
-      '/src/assets/screenshots_projects/test1 copy 3.png',
-      '/src/assets/screenshots_projects/test1 copy 4.png',
-      '/src/assets/screenshots_projects/test1 copy 5.png'
-    ]
+    images: [recipesKamel1, recipesKamel2, recipesKamel3]
   },
   {
     title: "DubaiHome",
     description: "Site de recherche immobilière utilisant l'API Bayut pour du contenu dynamique.",
-    longDescription: "DubaiHome est une plateforme immobilière sophistiquée qui exploite l'API Bayut pour fournir des informations immobilières en temps réel à Dubai. Développée avec Next.js pour des performances optimales et un excellent référencement.",
+    longDescription: "DubaiHome est une plateforme immobilière sophistiquée...",
     technologies: ["Next.js", "Chakra UI", "API Integration"],
-    images: [
-      '/src/assets/screenshots_projects/test1 copy 5.png',
-      '/src/assets/screenshots_projects/test1 copy 6.png',
-      '/src/assets/screenshots_projects/test1 copy 7.png'
-    ]
+    images: [dubaiHome1, dubaiHome2, dubaiHome3]
   },
   {
     title: "Portfolio",
     description: "Site personnel de présentation professionnelle avec design responsive et moderne.",
-    longDescription: "Ce portfolio personnel est une vitrine de mes compétences et réalisations en développement web. Construit avec une approche minimaliste mais efficace, il utilise Tailwind CSS pour un design responsive et moderne.",
+    longDescription: "Ce portfolio personnel est une vitrine de mes compétences...",
     technologies: ["HTML", "Tailwind CSS", "JavaScript"],
-    images: [
-      '/src/assets/screenshots_projects/test1 copy.png',
-      '/src/assets/screenshots_projects/test1 copy 2.png',
-      '/src/assets/screenshots_projects/test1 copy 3.png'
-    ]
+    images: [portfolio1, portfolio2, portfolio3]
   }
 ];
 const Projects = () => {

@@ -4,19 +4,28 @@ import './experiences.css';
 import Modal from '../Modal/Modal';
 import ProjectModalContent from '../Modal/ProjectModalContent/ProjectModalContent';
 
+// Imports des images
+import techInnovate1 from '../../assets/screenshots_projects/test1.png';
+import techInnovate2 from '../../assets/screenshots_projects/test1 copy.png';
+import techInnovate3 from '../../assets/screenshots_projects/test1 copy 2.png';
+
+import startupVision1 from '../../assets/screenshots_projects/test1 copy 3.png';
+import startupVision2 from '../../assets/screenshots_projects/test1 copy 4.png';
+import startupVision3 from '../../assets/screenshots_projects/test1 copy 5.png';
+
+import dataFlow1 from '../../assets/screenshots_projects/test1 copy 5.png';
+import dataFlow2 from '../../assets/screenshots_projects/test1 copy 6.png';
+import dataFlow3 from '../../assets/screenshots_projects/test1 copy 7.png';
+
 const experiences = [
   {
     title: "Développeur Full Stack",
     company: "Tech Innovate",
     period: "2022 - 2024",
     description: "Développement et maintenance d'applications web pour des clients internationaux. Chef de projet sur plusieurs missions critiques.",
-    longDescription: "En tant que développeur full stack chez Tech Innovate, j'ai dirigé le développement de plusieurs applications web complexes, gérant à la fois le front-end et le back-end. J'ai mis en place des architectures scalables et performantes, tout en assurant la formation de développeurs juniors. J'ai également participé à l'amélioration continue des processus de développement.",
+    longDescription: "En tant que développeur full stack chez Tech Innovate, j'ai dirigé le développement de plusieurs applications web complexes...",
     technologies: ["React", "Node.js", "AWS", "Docker", "MongoDB"],
-    images: [
-      '/src/assets/screenshots_projects/test1.png',
-      '/src/assets/screenshots_projects/test1 copy.png',
-      '/src/assets/screenshots_projects/test1 copy 2.png'
-    ],
+    images: [techInnovate1, techInnovate2, techInnovate3],
     achievements: ["Réduction de 40% du temps de chargement", "Migration réussie vers le cloud", "Formation de 5 développeurs juniors"]
   },
   {
@@ -24,13 +33,9 @@ const experiences = [
     company: "StartupVision",
     period: "2021 - 2022",
     description: "Direction technique d'une équipe de développement sur un projet de plateforme e-commerce innovante.",
-    longDescription: "À la tête d'une équipe de développeurs chez StartupVision, j'ai piloté la création d'une plateforme e-commerce de nouvelle génération. J'ai géré l'intégralité du cycle de développement, de la conception à la mise en production, tout en assurant la coordination avec les différentes parties prenantes.",
+    longDescription: "À la tête d'une équipe de développeurs chez StartupVision...",
     technologies: ["Vue.js", "Python", "PostgreSQL", "Redis", "Kubernetes"],
-    images: [
-      '/src/assets/screenshots_projects/test1 copy 3.png',
-      '/src/assets/screenshots_projects/test1 copy 4.png',
-      '/src/assets/screenshots_projects/test1 copy 5.png'
-    ],
+    images: [startupVision1, startupVision2, startupVision3],
     achievements: ["Lancement réussi en 6 mois", "Acquisition de 10000 utilisateurs", "Taux de satisfaction client de 95%"]
   },
   {
@@ -38,16 +43,14 @@ const experiences = [
     company: "DataFlow Systems",
     period: "2020 - 2021",
     description: "Conception et développement de microservices pour une application de traitement de données en temps réel.",
-    longDescription: "Chez DataFlow Systems, j'ai contribué au développement d'une architecture microservices complexe pour le traitement de données en temps réel. J'ai implémenté des solutions robustes pour gérer des flux de données massifs, tout en assurant la haute disponibilité et la scalabilité du système.",
+    longDescription: "Chez DataFlow Systems, j'ai contribué au développement d'une architecture microservices complexe...",
     technologies: ["Java", "Spring Boot", "Kafka", "Elasticsearch", "Kubernetes"],
-    images: [
-      '/src/assets/screenshots_projects/test1 copy 5.png',
-      '/src/assets/screenshots_projects/test1 copy 6.png',
-      '/src/assets/screenshots_projects/test1 copy 7.png'
-    ],
+    images: [dataFlow1, dataFlow2, dataFlow3],
     achievements: ["Traitement de 1M de requêtes/jour", "Amélioration de 60% des performances", "Zéro downtime sur 12 mois"]
   }
 ];
+
+// Le reste du composant reste identique...
 
 const Experiences = () => {
   const [selectedExperience, setSelectedExperience] = useState(null);
