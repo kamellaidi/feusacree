@@ -1,56 +1,46 @@
-// ProjectModalContent.jsx
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ViewToggle from './components/ViewToggle';
+import ZoomableImage from './components/ZoomableImage';
+import NavigationButtons from './components/NavigationButtons';
+import FeatureIndicators from './components/FeatureIndicators';
+import FeatureDetails from './components/FeatureDetails';
+import { useZoom } from '../../../hooks/useZoom';
+import { useFeatureNavigation } from '../../../hooks/useFeatureNavigation';
 import './projectmodalcontent.css';
 
 const ProjectModalContent = ({ project }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { zoom, setZoom, handleZoomIn, handleZoomOut, resetZoom } = useZoom();
+  const { currentIndex, next, prev } = useFeatureNavigation(project.features);
+  const [isShowingCode, setIsShowingCode] = useState(false);
 
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => 
-      prev === project.images.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => 
-      prev === 0 ? project.images.length - 1 : prev - 1
-    );
-  };
+  const currentFeature = project.features[currentIndex];
+  const currentView = isShowingCode ? currentFeature.code : currentFeature.interface;
 
   return (
     <div className="project-modal-content">
+      <ViewToggle 
+        isShowingCode={isShowingCode} 
+        onToggle={setIsShowingCode} 
+      />
+
       <div className="project-image-container">
-        <img 
-          src={project.images[currentImageIndex]} 
-          alt={`${project.title} screenshot ${currentImageIndex + 1}`}
+        <ZoomableImage 
+          image={currentView.image}
+          zoom={zoom}
+          onZoom={setZoom}
+          onZoomIn={handleZoomIn}
+          onZoomOut={handleZoomOut}
+          alt={`${project.title} - ${currentFeature.name}`}
         />
         
-        <button 
-          onClick={prevImage}
-          className="nav-button prev"
-          aria-label="Image précédente"
-        >
-          <ChevronLeft size={24} />
-        </button>
-        
-        <button 
-          onClick={nextImage}
-          className="nav-button next"
-          aria-label="Image suivante"
-        >
-          <ChevronRight size={24} />
-        </button>
-
-        <div className="image-indicators">
-          {project.images.map((_, index) => (
-            <div 
-              key={index}
-              className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
-            />
-          ))}
-        </div>
+        <NavigationButtons onNext={next} onPrev={prev} />
+        <FeatureIndicators 
+          count={project.features.length} 
+          currentIndex={currentIndex} 
+        />
       </div>
+
+      <FeatureDetails feature={currentFeature} view={currentView} />
 
       <div className="project-details">
         <p>{project.longDescription}</p>

@@ -7,7 +7,7 @@ const Presentation = () => {
       <div className="text-block">
         <h2>Hello World</h2>
         <p>
-          Je suis Kamel Laïdi, développeur web Javascript passionné par le front-end et le back-end. Mon adaptabilité et mon expertise me permettent de créer des solutions web innovantes et efficaces.
+          Je suis Kamel, développeur web Javascript passionné par le front-end et le back-end. Mon adaptabilité et mon expertise me permettent de créer des solutions web innovantes et efficaces.
         </p>
         <p>
           Actuellement, je contribue à l'informatisation d'outils de production, développant des formulaires dynamiques et gérant des bases de données avec SAP HANA et SQL Server.

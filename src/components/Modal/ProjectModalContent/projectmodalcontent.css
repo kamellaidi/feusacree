@@ -90,3 +90,144 @@
       justify-content: center;
     }
   }
+
+  .image-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    height: 400px;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+  }
+  
+  .zoom-controls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .zoom-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .zoom-button:hover {
+    background: rgba(224, 168, 192, 0.3);
+  }
+  
+  .screenshot-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(224, 168, 192, 0.1);
+    border-radius: 8px;
+  }
+  
+  .screenshot-title {
+    color: #e0a8c0;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .screenshot-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .image-wrapper {
+      height: 300px;
+    }
+  }
+
+  .view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .toggle-button:hover {
+    background: rgba(224, 168, 192, 0.3);
+  }
+  
+  .toggle-button.active {
+    background: #e0a8c0;
+  }
+  
+  .feature-details {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(224, 168, 192, 0.1);
+    border-radius: 0.5rem;
+  }
+  
+  .feature-title {
+    color: #e0a8c0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .image-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    height: 400px;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    will-change: transform;
+    transform-origin: top left;
+  }
+  
+  .image-wrapper img.zoomable {
+    cursor: zoom-in;
+  }
+  
+  .image-wrapper img.zoomed {
+    cursor: zoom-out;
+  }
+  
+  @media (hover: none) {
+    .image-wrapper img.zoomable,
+    .image-wrapper img.zoomed {
+      cursor: default;
+      transform-origin: center !important;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .image-wrapper img.zoomable,
+    .image-wrapper img.zoomed {
+      cursor: default;
+      transform-origin: center !important;
+    }
+  }
