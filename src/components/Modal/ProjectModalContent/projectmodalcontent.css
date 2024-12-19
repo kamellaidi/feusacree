@@ -67,7 +67,7 @@
   .project-details p {
     margin-bottom: 20px;
     line-height: 1.6;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   
   /* Réutilisation des styles existants pour les technologies */
@@ -181,15 +181,20 @@
   }
   
   .feature-details {
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     padding: 1rem;
     background: rgba(224, 168, 192, 0.1);
     border-radius: 0.5rem;
   }
+
+  .feature-description {
+    font-size: 0.85rem; 
+    line-height: 1.4;
+  }
   
   .feature-title {
     color: #e0a8c0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
   }
 

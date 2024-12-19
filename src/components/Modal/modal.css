@@ -9,9 +9,11 @@
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: 1000;
     padding: 20px;
+    overflow-y: auto; /* Permet le scroll si nécessaire */
+
   }
   
   .modal-content {
@@ -21,7 +23,10 @@
     max-width: 900px;
     box-shadow: 0 4px 15px rgba(224, 168, 192, 0.2);
     color: #fff;
-  }
+    margin: 60px auto 20px; /* Ajoute une marge en haut pour éviter la navbar */
+    max-height: calc(100vh - 100px); /* Hauteur max en fonction de la viewport */
+    overflow-y: auto; /* Permet le scroll dans la modal si le contenu est trop long */
+}
   
   .modal-header {
     display: flex;
@@ -32,9 +37,41 @@
   
   .modal-header h3 {
     color: #e0a8c0;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Réduit de 1.4rem */
     margin: 0;
   }
+  
+
+  /* Styles pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .modal-overlay {
+      padding: 10px;
+  }
+  
+  .modal-content {
+      margin: 40px auto 10px;
+      max-height: calc(100vh - 60px);
+  }
+}
+
+/* Style pour le scrollbar si nécessaire */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(224, 168, 192, 0.3);
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(224, 168, 192, 0.5);
+}
   
   .close-button {
     background: none;
