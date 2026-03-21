@@ -1,6 +1,6 @@
 export const qualiconsultProject = {
   title: "Assistant Qualiconsult",
-  description: "Outil interne React de génération automatique de templates Word à partir des données JSON Daxium — utilisé en production chez QUALICONSULT Sécurité.",
+  description: "Outil interne React de génération automatique de templates Word à partir des données JSON Daxium. Utilisé en production chez QUALICONSULT Sécurité.",
   longDescription: "Application React métier développée pour automatiser la production de rapports d'audit. Les inspecteurs saisissent leurs données dans des formulaires Daxium (no-code) ; l'assistant parse les réponses JSON, mappe les champs sur des templates Word prédéfinis et génère les documents prêts à signer. Réduction significative du temps de traitement post-visite.",
   features: [
     {
@@ -12,7 +12,7 @@ export const qualiconsultProject = {
       code: {
         type: "snippet",
         language: "javascript",
-        description: "useWordTemplate — mapping des champs Daxium sur les placeholders du template, génération du .docx via la lib docx et téléchargement navigateur.",
+        description: "useWordTemplate : mapping des champs Daxium sur les placeholders du template, génération du .docx via la lib docx et téléchargement navigateur.",
         snippet: `// hooks/useWordTemplate.js
 import { useCallback } from 'react';
 import { Document, Paragraph, TextRun, Packer } from 'docx';
@@ -70,7 +70,7 @@ export const useWordTemplate = (templateId) => {
       code: {
         type: "snippet",
         language: "javascript",
-        description: "parseDaxiumResponse — normalisation du JSON Daxium : clés snake_case, conversion des dates, extraction des pièces jointes.",
+        description: "parseDaxiumResponse : normalisation du JSON Daxium, clés snake_case, conversion des dates, extraction des pièces jointes.",
         snippet: `// utils/parseDaxiumResponse.js
 export const parseDaxiumResponse = (rawResponse) => {
   const { data, metadata } = rawResponse;
@@ -111,7 +111,7 @@ export const parseDaxiumResponse = (rawResponse) => {
       code: {
         type: "snippet",
         language: "javascript",
-        description: "Handler webhook Daxium — validation de signature HMAC, parsing de la payload, déclenchement de la génération de rapport.",
+        description: "Handler webhook Daxium : validation de signature HMAC, parsing de la payload, déclenchement de la génération de rapport.",
         snippet: `// server/webhooks/daxiumHandler.js
 const crypto = require('crypto');
 

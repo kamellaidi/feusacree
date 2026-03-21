@@ -3,16 +3,16 @@
   "qualiconsult": {
     "title": "Chef de Projet & Développeur",
     "company": "QUALICONSULT Sécurité",
-    "period": "Décembre 2022 — Présent",
+    "period": "Décembre 2022 - Présent",
     "axis_management_label": "Gestion de projet",
     "axis_management_desc": "Pilotage de dossiers CEE et Sécurité Incendie : coordination DSI, terrain et prestataires, suivi COFRAC, reporting direction.",
     "axis_dev_label": "Développement",
     "axis_dev_desc": "Conception d'outils métier : formulaires dynamiques Daxium, automatisation via webhooks, bases SAP HANA et SQL Server, tableaux de bord SAP Analytics Cloud."
   },
   "oclock": {
-    "title": "Développeur Full Stack — Formation",
+    "title": "Développeur Full Stack, Formation",
     "company": "O'Clock",
-    "period": "Février 2022 — Septembre 2022",
+    "period": "Février 2022 - Septembre 2022",
     "description": "Formation intensive 798h en développement web. Spécialisation React. RNCP Bac+2. Projet de fin d'études en équipe de 5 : application full stack livrée en mode Agile."
   }
 }

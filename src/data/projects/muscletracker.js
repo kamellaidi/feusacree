@@ -1,7 +1,7 @@
 export const muscletrackerProject = {
   title: "MuscleTracker",
   description: "Application mobile de suivi sportif (Expo/React Native) couplée à une version web Next.js avec authentification et base MongoDB.",
-  longDescription: "Deux versions complémentaires : une app mobile Expo/React Native (TypeScript) avec stockage local AsyncStorage, navigation par tabs et hooks custom pour la gestion des séances — et une version web Next.js 14 avec Prisma ORM, MongoDB Atlas, NextAuth et API Routes. Les deux partagent la même logique métier : plans d'entraînement, filtrage par groupe musculaire, historique et statistiques par séance.",
+  longDescription: "Deux versions complémentaires : une app mobile Expo/React Native (TypeScript) avec stockage local AsyncStorage, navigation par tabs et hooks custom pour la gestion des séances, et une version web Next.js 14 avec Prisma ORM, MongoDB Atlas, NextAuth et API Routes. Les deux partagent la même logique métier : plans d'entraînement, filtrage par groupe musculaire, historique et statistiques par séance.",
   githubUrl: "https://github.com/kamellaidi/muscletracker",
   features: [
     {
@@ -13,7 +13,7 @@ export const muscletrackerProject = {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "WorkoutPage — gestion optimiste de la liste après ajout, rechargement déclenché par changement de date via useCallback.",
+        description: "WorkoutPage : gestion optimiste de la liste après ajout, rechargement déclenché par changement de date via useCallback.",
         snippet: `// app/(tabs)/workout.tsx (extrait)
 export default function WorkoutPage() {
   const { colors } = useTheme();
@@ -21,7 +21,7 @@ export default function WorkoutPage() {
   const [todayWorkouts, setTodayWorkouts] = useState<WorkoutEntry[]>([]);
   const [showModal, setShowModal] = useState(false);
 
-  // Mise à jour optimiste — pas de rechargement réseau
+  // Mise à jour optimiste, pas de rechargement réseau
   const handleWorkoutAdded = useCallback((newWorkout: WorkoutEntry) => {
     setTodayWorkouts(prev => [...prev, newWorkout]);
     setShowModal(false);
@@ -46,7 +46,7 @@ export default function WorkoutPage() {
       }
     },
     {
-      name: "Hooks — Navigation de dates",
+      name: "Hooks : Navigation de dates",
       interface: {
         type: "description",
         content: "Sélecteur de date mobile avec navigation jour précédent / suivant / aujourd'hui. Synchronisation automatique entre les composants jour, mois, année et la chaîne ISO utilisée pour les requêtes."
@@ -54,7 +54,7 @@ export default function WorkoutPage() {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useDateNavigation — synchronisation bidirectionnelle entre composants jour/mois/année et date ISO via useEffect.",
+        description: "useDateNavigation : synchronisation bidirectionnelle entre composants jour/mois/année et date ISO via useEffect.",
         snippet: `// src/hooks/useDateNavigation.ts
 import { useCallback, useEffect, useState } from 'react';
 import { getTodayISOString, toISODateString } from '../constants/dates';
@@ -101,7 +101,7 @@ export const useDateNavigation = () => {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "Route API workouts (GET/POST) avec Prisma — requête conditionnelle typée et création avec relations.",
+        description: "Route API workouts (GET/POST) avec Prisma : requête conditionnelle typée et création avec relations.",
         snippet: `// app/api/workouts/route.ts
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
@@ -146,7 +146,7 @@ export async function POST(request: Request) {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useWorkoutForm — validation métier avec messages d'erreur natifs React Native avant persistance AsyncStorage.",
+        description: "useWorkoutForm : validation métier avec messages d'erreur natifs React Native avant persistance AsyncStorage.",
         snippet: `// src/hooks/useWorkoutForm.ts (extrait)
 export const useWorkoutForm = (
   selectedDateString: string,

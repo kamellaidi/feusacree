@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './contact.css';
 
+const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL;
+
 const Contact = () => {
   const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
@@ -20,10 +22,12 @@ const Contact = () => {
     e.preventDefault();
     setStatus('sending');
     try {
-      const mailtoLink = `mailto:kamellaidi@outlook.fr?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-        `De: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
-      )}`;
-      window.location.href = mailtoLink;
+      const response = await fetch(CONTACT_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) throw new Error('Erreur serveur');
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch {
@@ -36,10 +40,6 @@ const Contact = () => {
       <h2>{t('title')}</h2>
 
       <div className="contact-info">
-        <a href="mailto:kamellaidi@outlook.fr" className="contact-info-item">
-          kamellaidi@outlook.fr
-        </a>
-        <span className="contact-info-separator">·</span>
         <span className="contact-info-item">Saint-Maur-des-Fossés (94)</span>
         <span className="contact-info-separator">·</span>
         <a

@@ -40,7 +40,6 @@ const SEO = () => {
     name: 'Kamel Laidi',
     jobTitle: m.jobTitle,
     url: SITE_URL,
-    email: 'kamellaidi@outlook.fr',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Saint-Maur-des-Fossés',

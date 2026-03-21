@@ -1,7 +1,7 @@
 export const dicodzProject = {
   title: "DicoDZ",
-  description: "Dictionnaire bilingue français / algérien — React TypeScript avec recherche debounce et API REST Node.js / MongoDB.",
-  longDescription: "Application full stack composée d'un front React TypeScript (hooks custom, recherche dynamique avec debounce) et d'un back Node.js Express avec MongoDB. La recherche en temps réel interroge deux endpoints distincts — liste complète ou recherche filtrée — avec gestion des erreurs Axios typée. Architecture séparée front/back avec CORS configuré.",
+  description: "Dictionnaire bilingue français / algérien. React TypeScript avec recherche debounce et API REST Node.js / MongoDB.",
+  longDescription: "Application full stack composée d'un front React TypeScript (hooks custom, recherche dynamique avec debounce) et d'un back Node.js Express avec MongoDB. La recherche en temps réel interroge deux endpoints distincts (liste complète ou recherche filtrée) avec gestion des erreurs Axios typée. Architecture séparée front/back avec CORS configuré.",
   githubUrl: "https://github.com/kamellaidi/front-dico-dz",
   features: [
     {
@@ -13,7 +13,7 @@ export const dicodzProject = {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useDebounce — délai configurable avant déclenchement de la recherche, cleanup du timer à chaque keystroke.",
+        description: "useDebounce : délai configurable avant déclenchement de la recherche, cleanup du timer à chaque keystroke.",
         snippet: `// src/hooks/useDebounce.ts
 import { useState, useEffect } from 'react';
 
@@ -44,7 +44,7 @@ export function useDebounce<T>(value: T, delay: number): T {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useFetchWords — switch automatique entre endpoint liste et endpoint recherche selon la query, avec typage strict des erreurs Axios.",
+        description: "useFetchWords : switch automatique entre endpoint liste et endpoint recherche selon la query, avec typage strict des erreurs Axios.",
         snippet: `// src/hooks/useFetchWords.ts
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
@@ -100,7 +100,7 @@ export function useFetchWords(
       code: {
         type: "snippet",
         language: "javascript",
-        description: "Serveur Express — configuration CORS restrictive, routes API modulaires, vérification de la connexion MongoDB au démarrage.",
+        description: "Serveur Express : configuration CORS restrictive, routes API modulaires, vérification de la connexion MongoDB au démarrage.",
         snippet: `// api_dicodz/app.js
 const express = require('express');
 const db = require('./config/db');

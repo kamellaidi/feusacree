@@ -1,6 +1,6 @@
 export const ceePlanningProject = {
   title: "CEE Planning Tool",
-  description: "Outil de planification de dossiers CEE développé en PHP / Laravel — gestion des interventions, des inspecteurs et des créneaux disponibles.",
+  description: "Outil de planification de dossiers CEE développé en PHP / Laravel. Gestion des interventions, des inspecteurs et des créneaux disponibles.",
   longDescription: "Application Laravel MVC pour la gestion des dossiers de Certificats d'Économie d'Énergie. Permet de créer et suivre les dossiers (bénéficiaire, adresse, type de travaux), d'affecter les inspecteurs disponibles et de planifier les visites via un calendrier mensuel. API JSON interne consommée par le front Blade + Alpine.js.",
   features: [
     {
@@ -12,7 +12,7 @@ export const ceePlanningProject = {
       code: {
         type: "snippet",
         language: "php",
-        description: "DossierCEEController — validation Laravel, création avec relation travaux, déclenchement automatique de la planification d'inspection.",
+        description: "DossierCEEController : validation Laravel, création avec relation travaux, déclenchement automatique de la planification d'inspection.",
         snippet: `<?php
 // app/Http/Controllers/DossierCEEController.php
 namespace App\\Http\\Controllers;
@@ -72,7 +72,7 @@ class DossierCEEController extends Controller
       code: {
         type: "snippet",
         language: "php",
-        description: "Model DossierCEE — casts, relations HasMany/BelongsTo et scopes Eloquent pour le filtrage par statut et par période.",
+        description: "Model DossierCEE : casts, relations HasMany/BelongsTo et scopes Eloquent pour le filtrage par statut et par période.",
         snippet: `<?php
 // app/Models/DossierCEE.php
 namespace App\\Models;
@@ -129,7 +129,7 @@ class DossierCEE extends Model
       code: {
         type: "snippet",
         language: "php",
-        description: "PlanningService — calcul des créneaux libres par mois, détection des conflits d'agenda et affectation automatique des inspecteurs.",
+        description: "PlanningService : calcul des créneaux libres par mois, détection des conflits d'agenda et affectation automatique des inspecteurs.",
         snippet: `<?php
 // app/Services/PlanningService.php
 namespace App\\Services;
