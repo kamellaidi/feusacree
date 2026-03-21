@@ -5,13 +5,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Lora', serif;
+  font-family: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
 }
 
 body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-bg);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -23,32 +26,19 @@ body {
 
 main {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-content);
 }
 
-html {
-  scroll-behavior: smooth;
+#presentation,
+#projects,
+#skills,
+#contact {
+  scroll-margin-top: var(--navbar-height);
 }
 
-/* Assurez-vous que vos sections ont un padding-top pour compenser la hauteur de la navbar */
-#presentation, #projects, #skills, #contact {
-  scroll-margin-top: 60px; /* Ajustez cette valeur selon la hauteur de votre navbar */
-}
-
-/* Barre de défilement */
-::-webkit-scrollbar {
-  width: 10px; /* Largeur de la barre de défilement */
-}
-
-/* Piste */
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Fond de la piste transparent */
-}
-
-/* Curseur */
-::-webkit-scrollbar-thumb {
-  border: none; /* Supprimer les contours */
-}
+::-webkit-scrollbar       { width: 10px; }
+::-webkit-scrollbar-track { background-color: transparent; }
+::-webkit-scrollbar-thumb { border: none; }
 
 @media screen and (max-width: 768px) {
   body {

@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import './App.css';
 
 import VideoBG from './components/VideoBG';
 import Navbar from './components/Navbar/Navbar';
 import Presentation from './components/Presentation/Presentation';
 import SEO from './components/SEO/SEO';
+import './App.css';
 
 // Lazy-load les sections non critiques (sous le fold)
 const Projects    = lazy(() => import('./components/Projects/Projects'));

@@ -1,15 +1,10 @@
-:root {
-  --firepink: #e0a8c0;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+@import './styles/variables.css';
 
 /* Accessibilité — focus visible sur tous les éléments interactifs */
 :focus-visible {
   outline: 2px solid var(--firepink);
   outline-offset: 3px;
-  border-radius: 3px;
+  border-radius: var(--radius-sm);
 }
 
 /* Masque le focus au clic souris, le conserve au clavier */

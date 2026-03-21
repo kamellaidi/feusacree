@@ -1,87 +1,63 @@
-/* Modal.css */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 1000;
-    padding: 20px;
-    overflow-y: auto; /* Permet le scroll si nécessaire */
-
-  }
-  
-  .modal-content {
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 900px;
-    box-shadow: 0 4px 15px rgba(224, 168, 192, 0.2);
-    color: #fff;
-    margin: 60px auto 20px; /* Ajoute une marge en haut pour éviter la navbar */
-    max-height: calc(100vh - 100px); /* Hauteur max en fonction de la viewport */
-    overflow-y: auto; /* Permet le scroll dans la modal si le contenu est trop long */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-overlay);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: var(--z-modal);
+  padding: var(--space-md);
+  overflow-y: auto;
 }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 25px;
-  }
-  
-  .modal-header h3 {
-    color: #e0a8c0;
-    font-size: 1.2rem; /* Réduit de 1.4rem */
-    margin: 0;
-  }
-  
 
-  /* Styles pour les petits écrans */
+.modal-content {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: var(--modal-max);
+  box-shadow: 0 4px 15px var(--firepink-20);
+  color: var(--color-text);
+  margin: var(--space-3xl) auto var(--space-md);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.modal-header h3 {
+  color: var(--firepink);
+  font-size: var(--text-md);
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 5px;
+  transition: color var(--transition-base);
+}
+
+.close-button:hover {
+  color: var(--firepink);
+}
+
+.modal-content::-webkit-scrollbar       { width: var(--space-xs); }
+.modal-content::-webkit-scrollbar-track { background: var(--white-10); border-radius: var(--radius-sm); }
+.modal-content::-webkit-scrollbar-thumb { background: var(--firepink-30); border-radius: var(--radius-sm); }
+.modal-content::-webkit-scrollbar-thumb:hover { background: var(--firepink-40); }
+
 @media screen and (max-width: 768px) {
-  .modal-overlay {
-      padding: 10px;
-  }
-  
-  .modal-content {
-      margin: 40px auto 10px;
-      max-height: calc(100vh - 60px);
-  }
+  .modal-overlay  { padding: 10px; }
+  .modal-content  { margin: 40px auto 10px; max-height: calc(100vh - 60px); }
 }
-
-/* Style pour le scrollbar si nécessaire */
-.modal-content::-webkit-scrollbar {
-  width: 8px;
-}
-
-.modal-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-}
-
-.modal-content::-webkit-scrollbar-thumb {
-  background: rgba(224, 168, 192, 0.3);
-  border-radius: 4px;
-}
-
-.modal-content::-webkit-scrollbar-thumb:hover {
-  background: rgba(224, 168, 192, 0.5);
-}
-  
-  .close-button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    padding: 5px;
-    transition: color 0.3s ease;
-  }
-  
-  .close-button:hover {
-    color: #e0a8c0;
-  }

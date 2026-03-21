@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import './projects.css';
+
 import Modal from '../Modal/Modal';
 import ProjectModalContent from '../Modal/ProjectModalContent/ProjectModalContent';
 import { projects } from '../../data/index';
+import './projects.css';
 
 const Projects = () => {
   const { t } = useTranslation('projects');

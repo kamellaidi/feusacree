@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FeatureDetails = ({ feature, view }) => (
   <div className="feature-details">
