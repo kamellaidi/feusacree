@@ -1,3 +1,8 @@
+// Import des screenshots de code
+import traceapp_code_voicecoach from '../../assets/screenshots_projects/traceapp/traceapp_code_voicecoach.png';
+import traceapp_code_programs from '../../assets/screenshots_projects/traceapp/traceapp_code_programs.png';
+import traceapp_code_progress from '../../assets/screenshots_projects/traceapp/traceapp_code_progress.png';
+
 export const traceAppProject = {
   title: "TraceApp",
   description: "Application mobile de coaching sportif vocal. React Native, text-to-speech, programmes personnalisés et suivi de progression.",
@@ -6,8 +11,8 @@ export const traceAppProject = {
     {
       name: "Coach vocal",
       interface: {
-        type: "description",
-        content: "Écran de séance : le coach annonce chaque exercice à voix haute, compte les séries, déclenche automatiquement le timer de repos et relance la série suivante. Paramètres de voix configurables (langue, débit, tonalité)."
+        image: traceapp_code_voicecoach,
+        description: "Écran de séance : le coach annonce chaque exercice à voix haute, compte les séries, déclenche automatiquement le timer de repos et relance la série suivante. Paramètres de voix configurables (langue, débit, tonalité)."
       },
       code: {
         type: "snippet",
@@ -57,8 +62,8 @@ export const useVoiceCoach = () => {
     {
       name: "Programmes personnalisés",
       interface: {
-        type: "description",
-        content: "Créer, éditer et planifier des programmes d'entraînement sur mesure. Chaque programme définit les exercices, séries, reps et temps de repos. La planification hebdomadaire distribue les séances sur les jours de la semaine."
+        image: traceapp_code_programs,
+        description: "Créer, éditer et planifier des programmes d'entraînement sur mesure. Chaque programme définit les exercices, séries, reps et temps de repos. La planification hebdomadaire distribue les séances sur les jours de la semaine."
       },
       code: {
         type: "snippet",
@@ -109,8 +114,8 @@ export const ProgramService = {
     {
       name: "Historique & progression",
       interface: {
-        type: "description",
-        content: "Visualisation de l'historique des séances avec courbes de progression par exercice. Comparaison semaine N vs semaine N-1 pour chaque groupe musculaire."
+        image: traceapp_code_progress,
+        description: "Visualisation de l'historique des séances avec courbes de progression par exercice. Comparaison semaine N vs semaine N-1 pour chaque groupe musculaire."
       },
       code: {
         type: "snippet",

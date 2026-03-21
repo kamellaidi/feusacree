@@ -1,3 +1,9 @@
+// Import des screenshots de code
+import muscletracker_code_workout from '../../assets/screenshots_projects/muscletracker/muscletracker_code_workout.png';
+import muscletracker_code_datenavigation from '../../assets/screenshots_projects/muscletracker/muscletracker_code_datenavigation.png';
+import muscletracker_code_apiroutes from '../../assets/screenshots_projects/muscletracker/muscletracker_code_apiroutes.png';
+import muscletracker_code_form from '../../assets/screenshots_projects/muscletracker/muscletracker_code_form.png';
+
 export const muscletrackerProject = {
   title: "MuscleTracker",
   description: "Application mobile de suivi sportif (Expo/React Native) couplée à une version web Next.js avec authentification et base MongoDB.",
@@ -7,8 +13,8 @@ export const muscletrackerProject = {
     {
       name: "Séances d'entraînement",
       interface: {
-        type: "description",
-        content: "Page de séance mobile : sélecteur de date, liste des exercices du jour, formulaire d'ajout en 3 étapes (groupe musculaire → exercice → séries/reps/poids), résumé statistique en temps réel."
+        image: muscletracker_code_workout,
+        description: "Page de séance mobile : sélecteur de date, liste des exercices du jour, formulaire d'ajout en 3 étapes (groupe musculaire → exercice → séries/reps/poids), résumé statistique en temps réel."
       },
       code: {
         type: "snippet",
@@ -48,8 +54,8 @@ export default function WorkoutPage() {
     {
       name: "Hooks : Navigation de dates",
       interface: {
-        type: "description",
-        content: "Sélecteur de date mobile avec navigation jour précédent / suivant / aujourd'hui. Synchronisation automatique entre les composants jour, mois, année et la chaîne ISO utilisée pour les requêtes."
+        image: muscletracker_code_datenavigation,
+        description: "Sélecteur de date mobile avec navigation jour précédent / suivant / aujourd'hui. Synchronisation automatique entre les composants jour, mois, année et la chaîne ISO utilisée pour les requêtes."
       },
       code: {
         type: "snippet",
@@ -95,8 +101,8 @@ export const useDateNavigation = () => {
     {
       name: "API Routes & Schéma Prisma",
       interface: {
-        type: "description",
-        content: "Version web Next.js 14 : API Routes typées avec Prisma Client, MongoDB Atlas, authentification NextAuth. Gestion des séances, machines, plans d'entraînement et profil utilisateur."
+        image: muscletracker_code_apiroutes,
+        description: "Version web Next.js 14 : API Routes typées avec Prisma Client, MongoDB Atlas, authentification NextAuth. Gestion des séances, machines, plans d'entraînement et profil utilisateur."
       },
       code: {
         type: "snippet",
@@ -140,8 +146,8 @@ export async function POST(request: Request) {
     {
       name: "Formulaire d'exercice",
       interface: {
-        type: "description",
-        content: "Hook de formulaire multi-étapes : sélection de l'exercice, saisie des séries/reps/poids avec validation complète avant soumission."
+        image: muscletracker_code_form,
+        description: "Hook de formulaire multi-étapes : sélection de l'exercice, saisie des séries/reps/poids avec validation complète avant soumission."
       },
       code: {
         type: "snippet",
