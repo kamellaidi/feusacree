@@ -3,11 +3,11 @@ import './skills.css';
 
 const SKILL_CATEGORIES = [
   { key: 'frontend', skills: ['JavaScript ES6+', 'React.js', 'Redux', 'HTML5', 'CSS3'] },
-  { key: 'backend',  skills: ['Node.js', 'API REST', 'Webhooks', 'Express'] },
+  { key: 'backend',  skills: ['Node.js', 'API REST', 'Webhooks', 'Express', 'PHP', 'Laravel'] },
   { key: 'databases', skills: ['SQL Server', 'SAP HANA', 'PostgreSQL', 'MongoDB'] },
   { key: 'sap',      skills: ['SAP Analytics Cloud', 'SAP BAS', 'Daxium'] },
   { key: 'tools',    skills: ['Git', 'GitHub'] },
-  { key: 'learning', skills: ['PHP', 'Laravel', 'Vue.js', '__capm__'] },
+  { key: 'learning', skills: ['Vue.js', '__capm__'] },
 ];
 
 const Skills = () => {
