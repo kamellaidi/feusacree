@@ -1,7 +1,7 @@
 export const traceAppProject = {
   title: "TraceApp",
-  description: "Application mobile de coaching sportif vocal — React Native, text-to-speech, programmes personnalisés et suivi de progression.",
-  longDescription: "Application React Native de coaching en temps réel : un coach vocal (expo-speech) guide l'utilisateur séance par séance — annonce les exercices, compte les séries, déclenche les timers de repos. Les programmes sont personnalisables et persistés en local via AsyncStorage. Navigation par tabs avec Expo Router.",
+  description: "Application mobile de coaching sportif vocal. React Native, text-to-speech, programmes personnalisés et suivi de progression.",
+  longDescription: "Application React Native de coaching en temps réel : un coach vocal (expo-speech) guide l'utilisateur séance par séance, annonce les exercices, compte les séries et déclenche les timers de repos. Les programmes sont personnalisables et persistés en local via AsyncStorage. Navigation par tabs avec Expo Router.",
   features: [
     {
       name: "Coach vocal",
@@ -12,7 +12,7 @@ export const traceAppProject = {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useVoiceCoach — wrapper expo-speech avec annonces contextuelles (début de série, fin de repos, encouragement).",
+        description: "useVoiceCoach : wrapper expo-speech avec annonces contextuelles (début de série, fin de repos, encouragement).",
         snippet: `// src/hooks/useVoiceCoach.ts
 import { useCallback } from 'react';
 import * as Speech from 'expo-speech';
@@ -63,7 +63,7 @@ export const useVoiceCoach = () => {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "ProgramService — persistance AsyncStorage avec upsert, génération du planning hebdomadaire et calcul du volume total par séance.",
+        description: "ProgramService : persistance AsyncStorage avec upsert, génération du planning hebdomadaire et calcul du volume total par séance.",
         snippet: `// src/services/ProgramService.ts
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Program, WeeklySchedule } from '../types';
@@ -115,7 +115,7 @@ export const ProgramService = {
       code: {
         type: "snippet",
         language: "typescript",
-        description: "useProgressStats — calcul des deltas de progression par exercice entre deux semaines, avec aggregation par groupe musculaire.",
+        description: "useProgressStats : calcul des deltas de progression par exercice entre deux semaines, avec aggregation par groupe musculaire.",
         snippet: `// src/hooks/useProgressStats.ts
 import { useMemo } from 'react';
 import { WorkoutEntry } from '../types';

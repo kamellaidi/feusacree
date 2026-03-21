@@ -3,7 +3,7 @@ import portfolio_modal from '../../assets/screenshots_projects/portfolio/feusacr
 import portfolio_projects from '../../assets/screenshots_projects/portfolio/feusacree_projets_front.png';
 
 export const portfolioProject = {
-  title: "Feu Sacré — Portfolio",
+  title: "Feu Sacré",
   description: "Portfolio React avec hooks personnalisés, background vidéo animé et toggle Interface/Code.",
   longDescription: "Portfolio construit de zéro, sans template ni UI library. Architecture React avec hooks custom (useFeatureNavigation, useZoom), background vidéo full-screen, modals projet avec toggle Interface/Code et zoom interactif. Navigation scroll-aware, design 100% CSS custom.",
   githubUrl: "https://github.com/kamellaidi/feusacree",
@@ -12,12 +12,12 @@ export const portfolioProject = {
       name: "Hooks personnalisés",
       interface: {
         image: portfolio_home,
-        description: "Interface principale — présentation, projets, compétences et contact sur une seule page avec navigation smooth-scroll."
+        description: "Interface principale : présentation, projets, compétences et contact sur une seule page avec navigation smooth-scroll."
       },
       code: {
         type: "snippet",
         language: "javascript",
-        description: "useFeatureNavigation — navigation circulaire entre les features d'un projet avec useCallback pour éviter les re-renders.",
+        description: "useFeatureNavigation : navigation circulaire entre les features d'un projet avec useCallback pour éviter les re-renders.",
         snippet: `// src/hooks/useFeatureNavigation.js
 import { useState, useCallback } from 'react';
 
@@ -49,7 +49,7 @@ export const useFeatureNavigation = (features) => {
       code: {
         type: "snippet",
         language: "javascript",
-        description: "useZoom — gestion du zoom interactif avec bornes min/max, step et reset via ZOOM_CONFIG.",
+        description: "useZoom : gestion du zoom interactif avec bornes min/max, step et reset via ZOOM_CONFIG.",
         snippet: `// src/hooks/useZoom.js
 import { useState, useCallback } from 'react';
 import { ZOOM_CONFIG } from '../constants/zoom';
@@ -82,7 +82,7 @@ export const useZoom = (initialZoom = ZOOM_CONFIG.DEFAULT) => {
       code: {
         type: "snippet",
         language: "javascript",
-        description: "Navbar scroll-aware — masque la navigation desktop une fois la première section passée.",
+        description: "Navbar scroll-aware : masque la navigation desktop une fois la première section passée.",
         snippet: `// src/components/Navbar/Navbar.jsx (extrait)
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
