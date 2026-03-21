@@ -33,6 +33,24 @@
   color: var(--firepink);
 }
 
+.lang-toggle {
+  background: none;
+  border: 1px solid #886675;
+  color: #886675;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: color 1.5s ease, border-color 1.5s ease;
+  margin-left: 20px;
+}
+
+.lang-toggle:hover {
+  color: var(--firepink);
+  border-color: var(--firepink);
+}
+
 .mobile-menu {
   display: none;
 }
@@ -97,6 +115,23 @@
 
   .mobile-nav-links a:hover {
     color: var(--firepink);
+  }
+
+  .lang-toggle--mobile {
+    background: none;
+    border: 1px solid #886675;
+    color: #886675;
+    font-size: 1.5rem;
+    padding: 6px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .lang-toggle--mobile:hover {
+    color: var(--firepink);
+    border-color: var(--firepink);
   }
 }
 

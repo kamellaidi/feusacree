@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import ViewToggle from './components/ViewToggle';
 import ZoomableImage from './components/ZoomableImage';
 import CodeBlock from './components/CodeBlock';
@@ -10,6 +11,7 @@ import { useFeatureNavigation } from '../../../hooks/useFeatureNavigation';
 import './projectmodalcontent.css';
 
 const ProjectModalContent = ({ project }) => {
+  const { t } = useTranslation('common');
   const { zoom, setZoom, handleZoomIn, handleZoomOut, resetZoom } = useZoom();
   const { currentIndex, next, prev } = useFeatureNavigation(project.features);
   const [isShowingCode, setIsShowingCode] = useState(false);
@@ -77,7 +79,7 @@ const ProjectModalContent = ({ project }) => {
             rel="noopener noreferrer"
             className="github-link"
           >
-            Voir sur GitHub →
+            {t('modal.github_cta')}
           </a>
         )}
         <div className="technologies">

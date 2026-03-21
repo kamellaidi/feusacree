@@ -1,26 +1,24 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
-
     try {
       const mailtoLink = `mailto:kamellaidi@outlook.fr?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
         `De: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
@@ -35,7 +33,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <h2>Contact</h2>
+      <h2>{t('title')}</h2>
 
       <div className="contact-info">
         <a href="mailto:kamellaidi@outlook.fr" className="contact-info-item">
@@ -49,6 +47,7 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="contact-info-item"
+          aria-label="LinkedIn de Kamel Laidi"
         >
           LinkedIn
         </a>
@@ -58,6 +57,7 @@ const Contact = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="contact-info-item"
+          aria-label="GitHub de Kamel Laidi"
         >
           GitHub
         </a>
@@ -67,7 +67,7 @@ const Contact = () => {
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="name">Nom</label>
+              <label htmlFor="name">{t('form.name')}</label>
               <input
                 type="text"
                 id="name"
@@ -78,7 +78,7 @@ const Contact = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{t('form.email')}</label>
               <input
                 type="email"
                 id="email"
@@ -91,7 +91,7 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="subject">Sujet</label>
+            <label htmlFor="subject">{t('form.subject')}</label>
             <input
               type="text"
               id="subject"
@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">{t('form.message')}</label>
             <textarea
               id="message"
               name="message"
@@ -114,18 +114,14 @@ const Contact = () => {
           </div>
 
           <button type="submit" className="submit-button">
-            Envoyer
+            {t('form.submit')}
           </button>
 
           {status === 'success' && (
-            <div className="status-message success">
-              Message envoyé avec succès !
-            </div>
+            <div className="status-message success">{t('form.success')}</div>
           )}
           {status === 'error' && (
-            <div className="status-message error">
-              Une erreur est survenue. Veuillez réessayer.
-            </div>
+            <div className="status-message error">{t('form.error')}</div>
           )}
         </form>
       </div>
