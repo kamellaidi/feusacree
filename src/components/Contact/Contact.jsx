@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './contact.css';
 
 const Contact = () => {
@@ -28,7 +28,7 @@ const Contact = () => {
       window.location.href = mailtoLink;
       setStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch {
       setStatus('error');
     }
   };
@@ -36,6 +36,33 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <h2>Contact</h2>
+
+      <div className="contact-info">
+        <a href="mailto:kamellaidi@outlook.fr" className="contact-info-item">
+          kamellaidi@outlook.fr
+        </a>
+        <span className="contact-info-separator">·</span>
+        <span className="contact-info-item">Saint-Maur-des-Fossés (94)</span>
+        <span className="contact-info-separator">·</span>
+        <a
+          href="https://www.linkedin.com/in/kamellaidi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-info-item"
+        >
+          LinkedIn
+        </a>
+        <span className="contact-info-separator">·</span>
+        <a
+          href="https://github.com/kamellaidi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-info-item"
+        >
+          GitHub
+        </a>
+      </div>
+
       <div className="contact-container">
         <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-row">
@@ -92,7 +119,7 @@ const Contact = () => {
 
           {status === 'success' && (
             <div className="status-message success">
-              Message envoyé avec succès!
+              Message envoyé avec succès !
             </div>
           )}
           {status === 'error' && (

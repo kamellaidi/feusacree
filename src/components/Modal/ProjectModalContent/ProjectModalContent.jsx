@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ViewToggle from './components/ViewToggle';
 import ZoomableImage from './components/ZoomableImage';
+import CodeBlock from './components/CodeBlock';
 import NavigationButtons from './components/NavigationButtons';
 import FeatureIndicators from './components/FeatureIndicators';
 import FeatureDetails from './components/FeatureDetails';
@@ -16,27 +17,52 @@ const ProjectModalContent = ({ project }) => {
   const currentFeature = project.features[currentIndex];
   const currentView = isShowingCode ? currentFeature.code : currentFeature.interface;
 
+  const handleToggle = (val) => {
+    setIsShowingCode(val);
+    resetZoom();
+  };
+
+  const renderView = () => {
+    if (currentView.type === 'snippet') {
+      return (
+        <CodeBlock
+          snippet={currentView.snippet}
+          language={currentView.language}
+        />
+      );
+    }
+    if (currentView.type === 'description') {
+      return (
+        <div className="description-card">
+          <p>{currentView.content}</p>
+        </div>
+      );
+    }
+    return (
+      <ZoomableImage
+        image={currentView.image}
+        zoom={zoom}
+        onZoom={setZoom}
+        onZoomIn={handleZoomIn}
+        onZoomOut={handleZoomOut}
+        alt={`${project.title} - ${currentFeature.name}`}
+      />
+    );
+  };
+
   return (
     <div className="project-modal-content">
-      <ViewToggle 
-        isShowingCode={isShowingCode} 
-        onToggle={setIsShowingCode} 
+      <ViewToggle
+        isShowingCode={isShowingCode}
+        onToggle={handleToggle}
       />
 
       <div className="project-image-container">
-        <ZoomableImage 
-          image={currentView.image}
-          zoom={zoom}
-          onZoom={setZoom}
-          onZoomIn={handleZoomIn}
-          onZoomOut={handleZoomOut}
-          alt={`${project.title} - ${currentFeature.name}`}
-        />
-        
+        {renderView()}
         <NavigationButtons onNext={next} onPrev={prev} />
-        <FeatureIndicators 
-          count={project.features.length} 
-          currentIndex={currentIndex} 
+        <FeatureIndicators
+          count={project.features.length}
+          currentIndex={currentIndex}
         />
       </div>
 
@@ -44,11 +70,19 @@ const ProjectModalContent = ({ project }) => {
 
       <div className="project-details">
         <p>{project.longDescription}</p>
+        {project.githubUrl && (
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            Voir sur GitHub →
+          </a>
+        )}
         <div className="technologies">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="tech-badge">
-              {tech}
-            </span>
+            <span key={index} className="tech-badge">{tech}</span>
           ))}
         </div>
       </div>

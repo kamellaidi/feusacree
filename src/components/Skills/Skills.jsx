@@ -2,32 +2,28 @@ import './skills.css';
 
 const skillCategories = [
   {
-    name: "Technologies Front-End",
-    skills: ["React", "Redux", "Next.js", "Vue.js", "Svelte", "Bootstrap", "Tailwind CSS"]
+    name: "Front-End",
+    skills: ["JavaScript ES6+", "React.js", "Redux", "HTML5", "CSS3"]
   },
   {
-    name: "Technologies Back-End",
-    skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL"]
+    name: "Back-End & API",
+    skills: ["Node.js", "API REST", "Webhooks", "Express"]
   },
   {
-    name: "Langages de Programmation",
-    skills: ["JavaScript", "TypeScript"]
+    name: "Bases de données",
+    skills: ["SQL Server", "SAP HANA", "PostgreSQL", "MongoDB"]
   },
   {
-    name: "Bases de Données",
-    skills: ["MongoDB", "PostgreSQL", "SAP HANA"]
+    name: "Écosystème SAP & Métier",
+    skills: ["SAP Analytics Cloud", "SAP BAS", "Daxium"]
   },
   {
-    name: "Outils et Environnement",
-    skills: ["Git", "GitHub", "GitLab", "Ubuntu", "Kubernetes"]
+    name: "Outils",
+    skills: ["Git", "GitHub"]
   },
   {
-    name: "Méthodologies et Pratiques",
-    skills: ["Agile/Scrum", "Jest", "API RESTful", "WebSocket"]
-  },
-  {
-    name: "Outils Spécifiques",
-    skills: ["SAP Analytics Cloud", "SQL Server"]
+    name: "En acquisition",
+    skills: ["PHP", "Laravel", "Vue.js", "CAPM PMI (en cours)"]
   }
 ];
 

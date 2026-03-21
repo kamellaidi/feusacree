@@ -1,22 +1,26 @@
-/* eslint-disable react/no-unescaped-entities */
 import './Presentation.css';
 
 const Presentation = () => {
   return (
     <section id="presentation" className="presentation-section">
       <div className="text-block">
-        <h2>Hello World</h2>
+        <h1>Kamel Laidi</h1>
+        <h2>Chef de Projet & Développeur Full Stack</h2>
         <p>
-          Je suis Kamel, développeur web Javascript passionné par le front-end et le back-end. Mon adaptabilité et mon expertise me permettent de créer des solutions web innovantes et efficaces.
+          Je pilote des projets de transformation digitale et je code les solutions qui vont avec.
+          Chez QUALICONSULT Sécurité depuis 2022, je coordonne DSI, terrain et prestataires sur des
+          dossiers CEE et Sécurité Incendie — et je développe en parallèle les outils SAP HANA,
+          Daxium et API qui automatisent ces process.
         </p>
         <p>
-          Actuellement, je contribue à l'informatisation d'outils de production, développant des formulaires dynamiques et gérant des bases de données avec SAP HANA et SQL Server.
+          Côté dev : React, Redux, Node.js, SQL Server, SAP HANA, TypeScript.
+          Côté gestion : planification, pilotage de prestataires, reporting, COFRAC.
+          Les deux compétences ne se font pas concurrence — elles se renforcent.
         </p>
         <p>
-          Mes compétences couvrent React, Redux, Node.js, Express, et diverses bases de données. J'ai réalisé des projets variés, de l'e-commerce à la location immobilière, témoignant de ma polyvalence.
-        </p>
-        <p>
-          Toujours en quête de nouveaux défis, je suis prêt à apporter mes compétences à des projets innovants. Explorez mon portfolio pour en savoir plus !
+          Formé à O&apos;Clock (798h, RNCP Bac+2, spécialisation React), j&apos;ai livré plusieurs
+          applications full stack en dehors du contexte pro : e-commerce, mobile, dictionnaire
+          bilingue, outils métier.
         </p>
       </div>
     </section>

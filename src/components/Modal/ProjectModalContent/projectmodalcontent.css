@@ -198,6 +198,92 @@
     margin-bottom: 0.5rem;
   }
 
+  /* Code snippet block */
+  .code-block-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0d1117;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .code-block-header {
+    background: #161b22;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    flex-shrink: 0;
+  }
+
+  .code-block-lang {
+    font-size: 0.75rem;
+    color: #e0a8c0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: monospace;
+  }
+
+  .code-block {
+    margin: 0;
+    padding: 16px;
+    overflow: auto;
+    flex: 1;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #e6edf3;
+    white-space: pre;
+    tab-size: 2;
+  }
+
+  .code-block code {
+    font-family: inherit;
+  }
+
+  /* Description card for interface views without screenshots */
+  .description-card {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(224, 168, 192, 0.05);
+    border: 1px solid rgba(224, 168, 192, 0.2);
+    border-radius: 8px;
+    padding: 32px;
+  }
+
+  .description-card p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 480px;
+  }
+
+  /* GitHub link */
+  .github-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #e0a8c0;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .github-link:hover {
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 768px) {
+    .code-block-wrapper,
+    .description-card {
+      height: 300px;
+    }
+    .code-block {
+      font-size: 0.72rem;
+    }
+  }
+
   .image-wrapper {
     overflow: hidden;
     position: relative;

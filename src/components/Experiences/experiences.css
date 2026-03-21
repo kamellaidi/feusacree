@@ -87,6 +87,35 @@
     background-color: rgba(224, 168, 192, 0.2);
   }
   
+  .axes {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .axe {
+    padding: 10px 14px;
+    background: rgba(224, 168, 192, 0.05);
+    border-left: 2px solid rgba(224, 168, 192, 0.4);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .axe-label {
+    font-size: 0.75rem;
+    color: #e0a8c0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .axe p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+
   @media screen and (max-width: 768px) {
     .experiences-grid {
       grid-template-columns: 1fr;

@@ -13,7 +13,31 @@
     color: #e0a8c0;
     font-size: 2rem;
     opacity: 0.8;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+
+  .contact-info-item {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-info-item:hover {
+    color: #e0a8c0;
+  }
+
+  .contact-info-separator {
+    color: rgba(255, 255, 255, 0.3);
   }
   
   .contact-container {
