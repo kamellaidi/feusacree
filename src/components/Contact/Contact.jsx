@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './contact.css';
 
-const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL ?? 'https://formspree.io/f/xeqdjygz';
+const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL;
 
 const Contact = () => {
   const { t } = useTranslation('contact');
