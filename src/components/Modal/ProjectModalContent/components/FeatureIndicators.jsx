@@ -1,4 +1,3 @@
-import React from 'react';
 
 const FeatureIndicators = ({ count, currentIndex }) => (
   <div className="image-indicators">

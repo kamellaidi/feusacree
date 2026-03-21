@@ -1,26 +1,47 @@
-import './App.css'
-import VideoBG from './components/VideoBG'
-import Navbar from './components/Navbar/Navbar'
-import Presentation from './components/Presentation/Presentation'
-import Projects from './components/Projects/Projects'
-import Skills from './components/Skills/Skills'
-import Contact from './components/Contact/Contact'
-import Experiences from './components/Experiences/Experiences'
+import { lazy, Suspense } from 'react';
+import { HelmetProvider } from 'react-helmet-async';
+
+import VideoBG from './components/VideoBG';
+import Navbar from './components/Navbar/Navbar';
+import Presentation from './components/Presentation/Presentation';
+import SEO from './components/SEO/SEO';
+import './App.css';
+
+// Lazy-load les sections non critiques (sous le fold)
+const Projects    = lazy(() => import('./components/Projects/Projects'));
+const Experiences = lazy(() => import('./components/Experiences/Experiences'));
+const Skills      = lazy(() => import('./components/Skills/Skills'));
+const Contact     = lazy(() => import('./components/Contact/Contact'));
+
+const SectionFallback = () => (
+  <div style={{ minHeight: '100vh' }} aria-hidden="true" />
+);
 
 const App = () => {
   return (
-    <div className="app-container">
-      <VideoBG />
-      <Navbar />
-      <main>
-        <Presentation />
-        <Projects />
-        <Experiences />
-        <Skills />
-        <Contact />
-      </main>
-    </div>
-  )
-}
+    <HelmetProvider>
+      <SEO />
+      <div className="app-container">
+        <VideoBG />
+        <Navbar />
+        <main>
+          <Presentation />
+          <Suspense fallback={<SectionFallback />}>
+            <Projects />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <Experiences />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <Skills />
+          </Suspense>
+          <Suspense fallback={<SectionFallback />}>
+            <Contact />
+          </Suspense>
+        </main>
+      </div>
+    </HelmetProvider>
+  );
+};
 
-export default App
+export default App;

@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
-  padding: 60px 20px;
+  padding: var(--space-3xl) var(--space-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,81 +10,73 @@
 }
 
 .projects-section h2 {
-  color: #e0a8c0;
-  font-size: 2.5rem; /* Légèrement plus grand pour plus d'impact */
+  color: var(--firepink);
+  font-size: var(--text-3xl);
   opacity: 0.8;
-  margin-bottom: 50px; /* Un peu plus d'espace avant les projets */
+  margin-bottom: var(--space-2xl);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Réduire légèrement la taille minimale */
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  max-width: var(--container-max);
   margin: 0 auto;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
-  padding: 25px;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  color: var(--color-text);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Assure une hauteur égale pour toutes les cartes */
+  height: 100%;
   cursor: pointer;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(224, 168, 192, 0.2);
+  box-shadow: 0 4px 15px var(--firepink-20);
 }
 
 .project-card h3 {
-  color: #e0a8c0;
+  color: var(--firepink);
   margin-bottom: 15px;
-  font-size: 1.4rem;
+  font-size: var(--text-xl);
 }
 
 .project-card p {
-  font-size: 0.9rem;
-  margin-bottom: 20px;
+  font-size: var(--text-base);
+  margin-bottom: var(--space-md);
   line-height: 1.6;
-  flex-grow: 1; /* Permet au texte de prendre l'espace disponible */
+  flex-grow: 1;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: auto; /* Pousse les badges vers le bas de la carte */
+  margin-top: auto;
 }
 
 .tech-badge {
-  background-color: rgba(224, 168, 192, 0.1);
-  color: #e0a8c0;
-  padding: 5px 12px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  transition: background-color 0.3s ease;
+  background-color: var(--firepink-10);
+  color: var(--firepink);
+  padding: 5px var(--space-sm);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-sm);
+  transition: background-color var(--transition-base);
 }
 
 .tech-badge:hover {
-  background-color: rgba(224, 168, 192, 0.2);
+  background-color: var(--firepink-20);
 }
 
 @media screen and (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    text-align: center;
-  }
-
-  .technologies {
-    justify-content: center;
-  }
+  .projects-grid   { grid-template-columns: 1fr; }
+  .project-card    { text-align: center; }
+  .technologies    { justify-content: center; }
 }

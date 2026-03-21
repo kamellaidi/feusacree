@@ -1,0 +1,12 @@
+{
+  "title": "Compétences",
+  "categories": {
+    "frontend": "Front-End",
+    "backend": "Back-End & API",
+    "databases": "Bases de données",
+    "sap": "Écosystème SAP & Métier",
+    "tools": "Outils",
+    "learning": "En acquisition"
+  },
+  "capm": "CAPM PMI (en cours)"
+}

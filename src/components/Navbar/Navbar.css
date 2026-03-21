@@ -3,12 +3,12 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
-  padding: 0 20px;
+  z-index: var(--z-navbar);
+  padding: 0 var(--space-md);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: var(--navbar-height);
   background-color: transparent;
 }
 
@@ -18,19 +18,37 @@
 }
 
 .nav-links li {
-  margin-left: 20px;
+  margin-left: var(--space-md);
 }
 
 .nav-links a {
-  color: #886675;
+  color: var(--firepink-dark);
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 0.5px;
-  transition: color 1.5s ease;
+  transition: color var(--transition-slow);
 }
 
 .nav-links a:hover {
   color: var(--firepink);
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--firepink-dark);
+  color: var(--firepink-dark);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-slow), border-color var(--transition-slow);
+  margin-left: var(--space-md);
+}
+
+.lang-toggle:hover {
+  color: var(--firepink);
+  border-color: var(--firepink);
 }
 
 .mobile-menu {
@@ -50,7 +68,7 @@
     position: fixed;
     top: 1rem;
     right: 1rem;
-    z-index: 10000;
+    z-index: var(--z-menu-toggle);
     background: none;
     border: none;
     cursor: pointer;
@@ -61,7 +79,7 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #886675;
+    background-color: var(--firepink-dark);
   }
 
   .fullscreen-menu {
@@ -70,11 +88,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: var(--color-bg);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: var(--z-navbar);
   }
 
   .mobile-nav-links {
@@ -89,14 +107,30 @@
   }
 
   .mobile-nav-links a {
-    color: #886675;
+    color: var(--firepink-dark);
     text-decoration: none;
     font-size: 2rem;
-    transition: color 0.3s ease;
+    transition: color var(--transition-base);
   }
 
   .mobile-nav-links a:hover {
     color: var(--firepink);
   }
-}
 
+  .lang-toggle--mobile {
+    background: none;
+    border: 1px solid var(--firepink-dark);
+    color: var(--firepink-dark);
+    font-size: 1.5rem;
+    padding: 6px var(--space-md);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    margin-left: 0;
+    transition: color var(--transition-base), border-color var(--transition-base);
+  }
+
+  .lang-toggle--mobile:hover {
+    color: var(--firepink);
+    border-color: var(--firepink);
+  }
+}

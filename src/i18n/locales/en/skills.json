@@ -1,0 +1,12 @@
+{
+  "title": "Skills",
+  "categories": {
+    "frontend": "Front-End",
+    "backend": "Back-End & API",
+    "databases": "Databases",
+    "sap": "SAP & Business Tools",
+    "tools": "Tools",
+    "learning": "Currently learning"
+  },
+  "capm": "CAPM PMI (in progress)"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Experience",
+  "qualiconsult": {
+    "title": "Project Manager & Developer",
+    "company": "QUALICONSULT Sécurité",
+    "period": "December 2022 — Present",
+    "axis_management_label": "Project management",
+    "axis_management_desc": "Leading CEE and Fire Safety files: coordinating IT teams, field staff and subcontractors, COFRAC compliance tracking, management reporting.",
+    "axis_dev_label": "Development",
+    "axis_dev_desc": "Building internal tools: dynamic Daxium forms, webhook automation, SAP HANA and SQL Server databases, SAP Analytics Cloud dashboards."
+  },
+  "oclock": {
+    "title": "Full Stack Developer — Bootcamp",
+    "company": "O'Clock",
+    "period": "February 2022 — September 2022",
+    "description": "Intensive 798-hour web development bootcamp. React specialisation. RNCP Level 4. Final project delivered in a team of 5 using Agile methodology."
+  }
+}

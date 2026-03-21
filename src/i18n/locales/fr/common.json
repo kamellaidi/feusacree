@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "presentation": "Présentation",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "switch_lang": "EN"
+  },
+  "modal": {
+    "view_interface": "Interface",
+    "view_code": "Code",
+    "github_cta": "Voir sur GitHub →"
+  }
+}

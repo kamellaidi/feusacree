@@ -1,238 +1,309 @@
 /* ProjectModalContent.css */
 .project-modal-content {
-    padding: 25px;
-  }
-  
-  .project-image-container {
-    position: relative;
-    margin-bottom: 25px;
-  }
-  
+  padding: var(--space-lg);
+}
+
+.project-image-container {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.project-image-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--black-50);
+  border: none;
+  color: var(--color-text);
+  padding: 10px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.nav-button:hover {
+  background: var(--firepink-30);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.image-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.indicator.active {
+  background: var(--firepink);
+}
+
+.project-details {
+  color: var(--color-text);
+}
+
+.project-details p {
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+  font-size: 0.85rem;
+}
+
+/* Réutilisation des styles existants pour les technologies */
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
   .project-image-container img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 8px;
+    height: 300px;
   }
-  
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .nav-button:hover {
-    background: rgba(224, 168, 192, 0.3);
-  }
-  
-  .prev {
-    left: 15px;
-  }
-  
-  .next {
-    right: 15px;
-  }
-  
-  .image-indicators {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-  }
-  
-  .indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-  }
-  
-  .indicator.active {
-    background: #e0a8c0;
-  }
-  
+
   .project-details {
-    color: #fff;
+    text-align: center;
   }
-  
-  .project-details p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-size: 0.85rem;
-  }
-  
-  /* Réutilisation des styles existants pour les technologies */
+
   .technologies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .project-image-container img {
-      height: 300px;
-    }
-    
-    .project-details {
-      text-align: center;
-    }
-    
-    .technologies {
-      justify-content: center;
-    }
-  }
-
-  .image-wrapper {
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    height: 400px;
-  }
-  
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transform-origin: center;
-  }
-  
-  .zoom-controls {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-  }
-  
-  .zoom-button {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 8px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .zoom-button:hover {
-    background: rgba(224, 168, 192, 0.3);
-  }
-  
-  .screenshot-details {
-    margin-bottom: 20px;
-    padding: 15px;
-    background: rgba(224, 168, 192, 0.1);
-    border-radius: 8px;
-  }
-  
-  .screenshot-title {
-    color: #e0a8c0;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-  
-  .screenshot-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .image-wrapper {
-      height: 300px;
-    }
-  }
-
-  .view-toggle {
-    display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
   }
-  
-  .toggle-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .toggle-button:hover {
-    background: rgba(224, 168, 192, 0.3);
-  }
-  
-  .toggle-button.active {
-    background: #e0a8c0;
-  }
-  
-  .feature-details {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background: rgba(224, 168, 192, 0.1);
-    border-radius: 0.5rem;
-  }
+}
 
-  .feature-description {
-    font-size: 0.85rem; 
-    line-height: 1.4;
-  }
-  
-  .feature-title {
-    color: #e0a8c0;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
+.image-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-md);
+  height: 400px;
+}
 
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  will-change: transform;
+  transform-origin: top left;
+}
+
+.image-wrapper img.zoomable {
+  cursor: zoom-in;
+}
+
+.image-wrapper img.zoomed {
+  cursor: zoom-out;
+}
+
+.zoom-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: var(--space-xs);
+  z-index: 10;
+}
+
+.zoom-button {
+  background: var(--black-50);
+  border: none;
+  color: var(--color-text);
+  padding: var(--space-xs);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.zoom-button:hover {
+  background: var(--firepink-30);
+}
+
+.screenshot-details {
+  margin-bottom: var(--space-md);
+  padding: 15px;
+  background: var(--firepink-10);
+  border-radius: var(--radius-md);
+}
+
+.screenshot-title {
+  color: var(--firepink);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.screenshot-description {
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
   .image-wrapper {
-    overflow: hidden;
-    position: relative;
-    border-radius: 8px;
-    height: 400px;
+    height: 300px;
   }
-  
-  .image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    will-change: transform;
-    transform-origin: top left;
-  }
-  
-  .image-wrapper img.zoomable {
-    cursor: zoom-in;
-  }
-  
+}
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--white-10);
+  color: var(--color-text);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.toggle-button:hover {
+  background: var(--firepink-30);
+}
+
+.toggle-button.active {
+  background: var(--firepink);
+}
+
+.feature-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--firepink-10);
+  border-radius: 0.5rem;
+}
+
+.feature-description {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.feature-title {
+  color: var(--firepink);
+  font-size: var(--text-lg);
+  margin-bottom: 0.5rem;
+}
+
+/* Code snippet block */
+.code-block-wrapper {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-code-bg);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-block-header {
+  background: var(--color-code-header);
+  padding: var(--space-xs) 16px;
+  border-bottom: 1px solid var(--white-10);
+  flex-shrink: 0;
+}
+
+.code-block-lang {
+  font-size: var(--text-xs);
+  color: var(--firepink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: monospace;
+}
+
+.code-block {
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+  flex: 1;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--color-code-text);
+  white-space: pre;
+  tab-size: 2;
+}
+
+.code-block code {
+  font-family: inherit;
+}
+
+/* Description card for interface views without screenshots */
+.description-card {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--firepink-05);
+  border: 1px solid var(--firepink-20);
+  border-radius: var(--radius-md);
+  padding: 32px;
+}
+
+.description-card p {
+  color: var(--white-80);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 480px;
+}
+
+/* GitHub link */
+.github-link {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--firepink);
+  font-size: var(--text-base);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.github-link:hover {
+  opacity: 0.7;
+}
+
+@media (hover: none) {
+  .image-wrapper img.zoomable,
   .image-wrapper img.zoomed {
-    cursor: zoom-out;
+    cursor: default;
+    transform-origin: center !important;
   }
-  
-  @media (hover: none) {
-    .image-wrapper img.zoomable,
-    .image-wrapper img.zoomed {
-      cursor: default;
-      transform-origin: center !important;
-    }
+}
+
+@media screen and (max-width: 768px) {
+  .image-wrapper img.zoomable,
+  .image-wrapper img.zoomed {
+    cursor: default;
+    transform-origin: center !important;
   }
-  
-  @media screen and (max-width: 768px) {
-    .image-wrapper img.zoomable,
-    .image-wrapper img.zoomed {
-      cursor: default;
-      transform-origin: center !important;
-    }
+
+  .code-block-wrapper,
+  .description-card {
+    height: 300px;
   }
+
+  .code-block {
+    font-size: 0.72rem;
+  }
+}

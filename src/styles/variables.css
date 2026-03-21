@@ -1,0 +1,92 @@
+/* ============================================================
+   DESIGN TOKENS — Feu Sacré Portfolio
+   Toutes les valeurs de design centralisées ici.
+   Zéro valeur magique autorisée dans les composants.
+   ============================================================ */
+
+:root {
+  /* === COULEURS — Palette principale === */
+  --firepink: #e0a8c0;
+  --firepink-dark: #886675;
+
+  /* Variantes d'opacité de la couleur principale */
+  --firepink-03: rgba(224, 168, 192, 0.03);
+  --firepink-05: rgba(224, 168, 192, 0.05);
+  --firepink-10: rgba(224, 168, 192, 0.10);
+  --firepink-20: rgba(224, 168, 192, 0.20);
+  --firepink-30: rgba(224, 168, 192, 0.30);
+  --firepink-40: rgba(224, 168, 192, 0.40);
+
+  /* Variantes blanc */
+  --white-03: rgba(255, 255, 255, 0.03);
+  --white-05: rgba(255, 255, 255, 0.05);
+  --white-10: rgba(255, 255, 255, 0.10);
+  --white-30: rgba(255, 255, 255, 0.30);
+  --white-70: rgba(255, 255, 255, 0.70);
+  --white-75: rgba(255, 255, 255, 0.75);
+  --white-80: rgba(255, 255, 255, 0.80);
+
+  /* Variantes noir */
+  --black-50: rgba(0, 0, 0, 0.50);
+  --black-75: rgba(0, 0, 0, 0.75);
+
+  /* Couleurs sémantiques */
+  --color-bg:       #000000;
+  --color-text:     #ffffff;
+  --color-card-bg:  var(--white-03);
+  --color-overlay:  var(--black-75);
+
+  /* Code block */
+  --color-code-bg:     #0d1117;
+  --color-code-header: #161b22;
+  --color-code-text:   #e6edf3;
+
+  /* === ESPACEMENT === */
+  --space-xs:  8px;
+  --space-sm:  12px;
+  --space-md:  20px;
+  --space-lg:  25px;
+  --space-xl:  30px;
+  --space-2xl: 50px;
+  --space-3xl: 60px;
+
+  /* === LAYOUT === */
+  --container-max: 1200px;
+  --modal-max:     900px;
+  --navbar-height: 60px;
+
+  /* === BORDER RADIUS === */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   10px;
+  --radius-xl:   15px;
+  --radius-full: 50%;
+
+  /* === TYPOGRAPHIE === */
+  --font-body:  'Lora', serif;
+  --text-xs:    0.72rem;
+  --text-sm:    0.8rem;
+  --text-base:  0.9rem;
+  --text-md:    1rem;
+  --text-lg:    1.1rem;
+  --text-xl:    1.4rem;
+  --text-2xl:   2rem;
+  --text-3xl:   2.5rem;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 1.5s ease;
+
+  /* === Z-INDEX === */
+  --z-video:        -1;
+  --z-content:       1;
+  --z-modal:      1000;
+  --z-navbar:     9999;
+  --z-menu-toggle: 10000;
+
+  /* === BREAKPOINTS (référence — ne pas utiliser dans @media) ===
+     mobile  : 768px
+     tablet  : 1024px
+  */
+}

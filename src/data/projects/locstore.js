@@ -15,8 +15,9 @@ import locstore_front_dashboard from '../../assets/screenshots_projects/locstore
 
 
 export const locstoreProject = {
-    title: "LocStore",
-    description: "Site e-commerce de location de matériel événementiel avec gestion avancée du panier et des réservations.",
+    title: "Loc'Store",
+    description: "Application e-commerce full stack de location de matériel événementiel — React, Redux, JWT, API REST.",
+    githubUrl: "https://github.com/kamellaidi",
 longDescription: "LocStore est une application full-stack de location de matériel événementiel développée avec React 18 et Redux pour la gestion d'état globale. L'architecture front-end s'appuie sur React Router DOM pour la navigation, Redux Toolkit pour la gestion des reducers, et intègre des hooks personnalisés pour optimiser la réutilisation du code. La gestion des dates utilise un système de validation complexe avec une logique de disponibilité en temps réel. Le panier implémente des reducers Redux pour la persistance des données et le calcul dynamique des prix. L'authentification utilise JWT avec stockage sécurisé, tandis que l'interface utilisateur est construite avec Bootstrap pour un design responsive. Le back-end Node.js/Express gère les requêtes API RESTful et PostgreSQL assure le stockage des données avec des relations complexes pour la gestion des réservations et du stock.",
     features: [
         {
