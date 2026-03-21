@@ -1,3 +1,8 @@
+// Import des screenshots de code
+import ceeplanning_code_controller from '../../assets/screenshots_projects/ceeplanning/ceeplanning_code_controller.png';
+import ceeplanning_code_model from '../../assets/screenshots_projects/ceeplanning/ceeplanning_code_model.png';
+import ceeplanning_code_service from '../../assets/screenshots_projects/ceeplanning/ceeplanning_code_service.png';
+
 export const ceePlanningProject = {
   title: "CEE Planning Tool",
   description: "Outil de planification de dossiers CEE développé en PHP / Laravel. Gestion des interventions, des inspecteurs et des créneaux disponibles.",
@@ -6,8 +11,8 @@ export const ceePlanningProject = {
     {
       name: "Gestion des dossiers CEE",
       interface: {
-        type: "description",
-        content: "Formulaire de création de dossier : bénéficiaire, adresse, nature des travaux (isolation, chauffage, menuiseries…), surface, date prévue. Validation côté serveur avec les règles métier CEE."
+        image: ceeplanning_code_controller,
+        description: "Formulaire de création de dossier : bénéficiaire, adresse, nature des travaux (isolation, chauffage, menuiseries…), surface, date prévue. Validation côté serveur avec les règles métier CEE."
       },
       code: {
         type: "snippet",
@@ -51,7 +56,7 @@ class DossierCEEController extends Controller
 
     public function planning(int $month, int $year): \\Illuminate\\Http\\JsonResponse
     {
-        $slots   = $this->planningService->getAvailableSlots($month, $year);
+        $slots    = $this->planningService->getAvailableSlots($month, $year);
         $dossiers = DossierCEE::whereMonth('date_prevue', $month)
             ->whereYear('date_prevue', $year)
             ->with('travaux', 'inspecteur')
@@ -66,8 +71,8 @@ class DossierCEEController extends Controller
     {
       name: "Modèle & Relations Laravel",
       interface: {
-        type: "description",
-        content: "Modèle DossierCEE avec relations polymorphiques vers les types de travaux CEE, belongsTo inspecteur, scopes de filtrage par statut. Migrations et seeders pour les codes travaux ATEE."
+        image: ceeplanning_code_model,
+        description: "Modèle DossierCEE avec relations polymorphiques vers les types de travaux CEE, belongsTo inspecteur, scopes de filtrage par statut. Migrations et seeders pour les codes travaux ATEE."
       },
       code: {
         type: "snippet",
@@ -123,8 +128,8 @@ class DossierCEE extends Model
     {
       name: "Service de planification",
       interface: {
-        type: "description",
-        content: "Calendrier mensuel des visites avec créneaux disponibles par inspecteur. Détection des conflits, affectation automatique au premier inspecteur libre, notifications email à la confirmation."
+        image: ceeplanning_code_service,
+        description: "Calendrier mensuel des visites avec créneaux disponibles par inspecteur. Détection des conflits, affectation automatique au premier inspecteur libre, notifications email à la confirmation."
       },
       code: {
         type: "snippet",

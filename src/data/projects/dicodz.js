@@ -1,3 +1,8 @@
+// Import des screenshots de code
+import dicodz_code_debounce from '../../assets/screenshots_projects/dicodz/dicodz_code_debounce.png';
+import dicodz_code_fetchwords from '../../assets/screenshots_projects/dicodz/dicodz_code_fetchwords.png';
+import dicodz_code_api from '../../assets/screenshots_projects/dicodz/dicodz_code_api.png';
+
 export const dicodzProject = {
   title: "DicoDZ",
   description: "Dictionnaire bilingue français / algérien. React TypeScript avec recherche debounce et API REST Node.js / MongoDB.",
@@ -7,8 +12,8 @@ export const dicodzProject = {
     {
       name: "Recherche avec debounce",
       interface: {
-        type: "description",
-        content: "Interface de recherche dynamique : saisie utilisateur → debounce 300ms → appel API → liste de mots FR/DZ filtrée en temps réel. Chaque mot affiche la traduction, le type grammatical et la transcription phonétique."
+        image: dicodz_code_debounce,
+        description: "Interface de recherche dynamique : saisie utilisateur → debounce 300ms → appel API → liste de mots FR/DZ filtrée en temps réel. Chaque mot affiche la traduction, le type grammatical et la transcription phonétique."
       },
       code: {
         type: "snippet",
@@ -38,8 +43,8 @@ export function useDebounce<T>(value: T, delay: number): T {
     {
       name: "Hook de fetch TypeScript",
       interface: {
-        type: "description",
-        content: "États loading, error et data gérés dans un seul hook. Le refreshTrigger permet de forcer un rechargement depuis l'extérieur sans modifier la query."
+        image: dicodz_code_fetchwords,
+        description: "États loading, error et data gérés dans un seul hook. Le refreshTrigger permet de forcer un rechargement depuis l'extérieur sans modifier la query."
       },
       code: {
         type: "snippet",
@@ -94,8 +99,8 @@ export function useFetchWords(
     {
       name: "API REST Express / MongoDB",
       interface: {
-        type: "description",
-        content: "Back Node.js Express avec MongoDB, CORS configuré pour le front React, routes modulaires. Endpoints GET /api/words et GET /api/words/search?q= avec correspondance partielle insensible à la casse."
+        image: dicodz_code_api,
+        description: "Back Node.js Express avec MongoDB, CORS configuré pour le front React, routes modulaires. Endpoints GET /api/words et GET /api/words/search?q= avec correspondance partielle insensible à la casse."
       },
       code: {
         type: "snippet",

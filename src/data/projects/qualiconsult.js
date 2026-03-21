@@ -1,3 +1,8 @@
+// Import des screenshots de code
+import qualiconsult_code_template from '../../assets/screenshots_projects/qualiconsult/qualiconsult_code_template.png';
+import qualiconsult_code_parser from '../../assets/screenshots_projects/qualiconsult/qualiconsult_code_parser.png';
+import qualiconsult_code_webhook from '../../assets/screenshots_projects/qualiconsult/qualiconsult_code_webhook.png';
+
 export const qualiconsultProject = {
   title: "Assistant Qualiconsult",
   description: "Outil interne React de génération automatique de templates Word à partir des données JSON Daxium. Utilisé en production chez QUALICONSULT Sécurité.",
@@ -6,8 +11,8 @@ export const qualiconsultProject = {
     {
       name: "Génération de templates Word",
       interface: {
-        type: "description",
-        content: "Interface de sélection du type de rapport (CEE, Sécurité Incendie, COFRAC). Aperçu des champs mappés avant génération. Téléchargement direct du fichier .docx en un clic."
+        image: qualiconsult_code_template,
+        description: "Interface de sélection du type de rapport (CEE, Sécurité Incendie, COFRAC). Aperçu des champs mappés avant génération. Téléchargement direct du fichier .docx en un clic."
       },
       code: {
         type: "snippet",
@@ -64,8 +69,8 @@ export const useWordTemplate = (templateId) => {
     {
       name: "Parser Daxium JSON",
       interface: {
-        type: "description",
-        content: "Les formulaires Daxium renvoient une structure JSON propriétaire avec tableaux de champs. Le parser normalise ces données en un objet plat utilisable par le générateur de template."
+        image: qualiconsult_code_parser,
+        description: "Les formulaires Daxium renvoient une structure JSON propriétaire avec tableaux de champs. Le parser normalise ces données en un objet plat utilisable par le générateur de template."
       },
       code: {
         type: "snippet",
@@ -105,8 +110,8 @@ export const parseDaxiumResponse = (rawResponse) => {
     {
       name: "Webhooks & Automatisation",
       interface: {
-        type: "description",
-        content: "Les soumissions de formulaires Daxium déclenchent un webhook HTTP vers le back Node.js. L'assistant reçoit la payload, valide la signature, parse les données et déclenche la génération automatique du rapport."
+        image: qualiconsult_code_webhook,
+        description: "Les soumissions de formulaires Daxium déclenchent un webhook HTTP vers le back Node.js. L'assistant reçoit la payload, valide la signature, parse les données et déclenche la génération automatique du rapport."
       },
       code: {
         type: "snippet",
